@@ -1,0 +1,112 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.calc-button {
+  border: 1px solid black;
+  padding: 1rem;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+.number {
+  background-color: #d8d9db;
+  color: black;
+}
+
+.screen {
+  grid-area: screen;
+  background: #000;
+  color: #fff;
+  font-size: 40px;
+  text-align: right;
+  padding: 20px 5px;
+}
+
+.number-0 {
+  grid-area: number-0;
+}
+
+.number-1 {
+  grid-area: number-1;
+}
+
+.number-2 {
+  grid-area: number-2;
+}
+
+.number-3 {
+  grid-area: number-3;
+}
+
+.number-4 {
+  grid-area: number-4;
+}
+
+.number-5 {
+  grid-area: number-5;
+}
+
+.number-6 {
+  grid-area: number-6;
+}
+
+.number-7 {
+  grid-area: number-7;
+}
+
+.number-8 {
+  grid-area: number-8;
+}
+
+.number-9 {
+  grid-area: number-9;
+}
+
+.sum {
+  grid-area: sum;
+}
+
+.subtraction {
+  grid-area: subtraction;
+}
+
+.multiplication {
+  grid-area: multiplication;
+}
+
+.division {
+  grid-area: division;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.arrow {
+  grid-area: arrow;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.operator {
+  background-color: orange;
+  color: #fff;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "screen screen screen screen" "clear clear arrow division"
+    "number-7 number-8 number-9 multiplication"
+    "number-4 number-5 number-6 subtraction" "number-1 number-2 number-3 sum"
+    "number-0 number-0 number-0 equal";
+}
