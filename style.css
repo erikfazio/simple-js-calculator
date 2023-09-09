@@ -1,10 +1,27 @@
+:root {
+  --bg-number-button: #d8d9db;
+  --bg-operator-button: #df974c;
+  --text-button-light: #ffffff;
+  --text-button-dark: #000000;
+}
+
 body {
-  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  width: 400px;
+  padding: 2rem;
 }
 
 .calc-button {
-  border: 1px solid black;
   padding: 1rem;
+  border: 1px solid var(--text-button-dark);
   font-size: 40px;
   cursor: pointer;
 }
@@ -14,17 +31,18 @@ button:hover {
 }
 
 .number {
-  background-color: #d8d9db;
-  color: black;
+  background-color: var(--bg-number-button);
+  color: var(--text-button-dark);
 }
 
 .screen {
+  font-family: "Courier New", Courier, monospace;
   grid-area: screen;
-  background: #000;
-  color: #fff;
+  padding: 20px 5px;
+  background: var(--text-button-dark);
+  color: var(--text-button-light);
   font-size: 40px;
   text-align: right;
-  padding: 20px 5px;
 }
 
 .number-0 {
@@ -87,17 +105,13 @@ button:hover {
   grid-area: clear;
 }
 
-.arrow {
-  grid-area: arrow;
-}
-
 .equal {
   grid-area: equal;
 }
 
 .operator {
-  background-color: orange;
-  color: #fff;
+  background-color: var(--bg-operator-button);
+  color: var(--text-button-light);
 }
 
 .calculator {
@@ -105,7 +119,7 @@ button:hover {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "screen screen screen screen" "clear clear arrow division"
+    "screen screen screen screen" "clear clear clear division"
     "number-7 number-8 number-9 multiplication"
     "number-4 number-5 number-6 subtraction" "number-1 number-2 number-3 sum"
     "number-0 number-0 number-0 equal";
